@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acciones y Actitudes Policiales</title>
+  <link rel="stylesheet" href="styles_acciones.css">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <p class="eyebrow">Instrumento pedagógico</p>
+      <h1>ACCIONES Y ACTITUDES POLICIALES</h1>
+      <p class="lead">
+        A continuación encontrará un conjunto de afirmaciones donde a partir del reconocimiento de acciones y actitudes usted podrá responder qué tan frecuente piensa, siente o se comporta de determinada manera, adopta una posición o llega a considerar una situación. Los ítems fueron diseñados como material pedagógico y carecen de validez evaluativa y/o diagnóstica, y su diligenciamiento corresponde a un ejercicio puramente académico en el cual usted participa de manera voluntaria.
+      </p>
+      <div class="notice">
+       Cada pregunta puede aportar 100, 50 o 0 puntos. Si la respuesta se alinea con el perfil esperado, suma 100 puntos; si muestra una alineación parcial, suma 50 puntos; y si sugiere un aspecto por fortalecer, no suma puntos.
+      </div>
+    </header>
+
+    <section class="intro-card">
+      <div>
+        <h2>Instrucciones</h2>
+        <p>
+          Lea cada afirmación con calma y seleccione una sola opción de respuesta. La prueba cuenta con 77 ítems y su objetivo es orientar un ejercicio académico de autorreconocimiento.
+        </p>
+        <ul>
+          <li><strong>Nunca</strong></li>
+          <li><strong>Casi nunca</strong></li>
+          <li><strong>Casi siempre</strong></li>
+          <li><strong>Siempre</strong></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Escala de respuesta</h2>
+        <table class="result-table">
+          <thead>
+            <tr>
+              <th>Opción</th>
+              <th>Significado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nunca</td>
+              <td>La afirmación no describe su comportamiento habitual.</td>
+            </tr>
+            <tr>
+              <td>Casi nunca</td>
+              <td>La afirmación se presenta con muy poca frecuencia.</td>
+            </tr>
+            <tr>
+              <td>Casi siempre</td>
+              <td>La afirmación se presenta con bastante frecuencia.</td>
+            </tr>
+            <tr>
+              <td>Siempre</td>
+              <td>La afirmación describe de manera constante su forma de actuar o pensar.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="small-note">
+          Esta versión muestra el puntaje total y el porcentaje obtenido. Si luego tienes una tabla de interpretación, se puede agregar.
+        </p>
+      </div>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-header">
+        <h2>Progreso del cuestionario</h2>
+        <span id="progressText">0 de 77 preguntas respondidas</span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+
+      <div class="progress-percent">
+        <span id="progressPercent">0%</span>
+      </div>
+    </section>
+
+    <form id="quizForm" class="quiz-form">
+      <section class="student-box">
+        <h2>Datos del participante</h2>
+        <label for="studentName">Nombre (opcional)</label>
+        <input type="text" id="studentName" name="studentName" placeholder="Escriba aquí su nombre">
+      </section>
+
+      <section class="question-section">
+        <h2>Cuestionario</h2>
+        <div id="questionsContainer"></div>
+      </section>
+
+      <div class="actions">
+        <button type="submit" class="btn primary">Calcular resultado</button>
+        <button type="button" id="resetBtn" class="btn secondary">Limpiar respuestas</button>
+      </div>
+    </form>
+
+    <div id="resultModal" class="modal-overlay hidden">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button type="button" id="closeModalBtn" class="modal-close">&times;</button>
+
+        <h2 id="modalTitle">Resultado</h2>
+        <p id="resultStudent"></p>
+
+        <div class="result-grid">
+          <div class="result-box">
+            <span class="label">Puntaje total</span>
+            <strong id="scoreValue">0</strong>
+          </div>
+          <div class="result-box">
+            <span class="label">Porcentaje obtenido</span>
+            <strong id="percentageValue">0%</strong>
+          </div>
+          <div class="result-box">
+            <span class="label">Preguntas respondidas</span>
+            <strong id="answeredValue">0 / 77</strong>
+          </div>
+        </div>
+
+        <p id="resultMessage" class="result-message"></p>
+
+        <p class="small-note">
+          Este resultado es de carácter académico y orientativo. No constituye un diagnóstico clínico ni una valoración profesional.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script_acciones.js"></script>
+</body>
+</html>
